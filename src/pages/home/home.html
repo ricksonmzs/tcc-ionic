@@ -1,14 +1,32 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      Tcc Ionic 
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
+  <!-- <The world is your oyster.
   <p>
     If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  </p> -->
+
+  <h4>Lista de Categorias</h4>
+
+  <!-- <button ion-button [navPush]="categoriaSavePage">Nova Categoria</button> -->
+  <button ion-button (click)="openCategoriaSave()">Nova Categoria</button>
+  <button ion-button (click)="ngOnInit()">Recarregar</button>
+
+  <br>
+
+  <ion-content>
+    <ion-list inset>
+      <ion-item *ngFor="let categoria of categorias">
+        <h2>{{categoria.nome}}</h2>
+        <p>{{categoria.id}}</p>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+
 </ion-content>
